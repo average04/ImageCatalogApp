@@ -4,7 +4,7 @@
   margin-top: -100pt;
   width: auto;
   min-width: 200px;
-  height: min(60%, 400px);
+  height: min(70%, 500px);
   border: 2px solid black;
   border-radius: 10pt;
   background-color: rgb(245, 248, 251);
@@ -15,8 +15,9 @@
 }
 
 .btn_group {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 3pt;
+  top: 3pt;
 }
 
 .btn {

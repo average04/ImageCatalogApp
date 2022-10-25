@@ -1,7 +1,7 @@
 import styles from "../styles/CarouselItem.module.css";
 import { useState } from "react";
 
-import { setBody, showModal, setHeader } from "../slice/ModalSlice";
+import { setBody, showModal, setHeader, setFooter } from "../slice/ModalSlice";
 
 import { useSelector, useDispatch } from "react-redux";
 import { IImage } from "../slice/types";
@@ -14,7 +14,23 @@ const CarouselItem = ({ image }: { image: IImage }) => {
 
   const handleEnlarge = (e: any) => {
     if (e.detail === 2) {
-      dispatch(setHeader(<div></div>));
+      dispatch(
+        setHeader(
+          <div style={{ marginLeft: "10pt" }}>
+            <h3>{image.name}</h3>
+            <div
+              style={{
+                width: "300pt",
+                display: "flex",
+                justifyContent: "center",
+                overflowWrap: "break-word",
+              }}
+            >
+              {image.description}
+            </div>
+          </div>
+        )
+      );
       dispatch(
         setBody(
           <img
@@ -25,6 +41,7 @@ const CarouselItem = ({ image }: { image: IImage }) => {
           />
         )
       );
+      dispatch(setFooter(<></>));
 
       dispatch(showModal());
     }

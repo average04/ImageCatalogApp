@@ -19,6 +19,7 @@ import { RootState } from "../store";
 import { useSelector, useDispatch } from "react-redux";
 import { IImage } from "../slice/types";
 import CarouselItem from "./CarouselItem";
+import { ConfirmToast } from "react-confirm-toast";
 
 import { AiOutlineSortAscending } from "react-icons/ai";
 import { AiOutlineSortDescending } from "react-icons/ai";
@@ -99,7 +100,20 @@ const CarouselComponent = () => {
           alignItems: "center",
         }}
       >
-        <button className={styles.btn}>Upload</button>
+        <ConfirmToast
+          asModal={true}
+          customCancel={"Cancel"}
+          customConfirm={"Confirm"}
+          customFunction={() => {
+            alert("Not implemented this yet :D");
+          }}
+          message={"Upload this file?"}
+          position={"top-left"}
+          showCloseIcon={false}
+          theme={"light"}
+        >
+          <button className={styles.btn}>Upload</button>
+        </ConfirmToast>
       </div>
     );
   };
