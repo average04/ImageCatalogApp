@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  height: 300pt;
+  background-color: aquamarine;
+  position: absolute;
+  background-image: url("../public/svgs/subtle-prism.svg");
+}
+
+.header_text {
+  position: absolute;
+  top: 70pt;
+  left: 10%;
+  font-size: 30pt;
+  font-weight: bolder;
+}

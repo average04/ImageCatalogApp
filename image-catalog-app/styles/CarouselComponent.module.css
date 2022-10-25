@@ -1,0 +1,40 @@
+.container {
+  position: absolute;
+  top: 180pt;
+  width: 90%;
+  height: auto;
+  background-color: rgb(4, 62, 113);
+  border-radius: 5pt;
+  padding-top: 10pt;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  padding: 30px;
+  margin-right: 20pt;
+  overflow: visible;
+}
+
+.carousel_wrap {
+  overflow: hidden;
+}
+
+.filters {
+  padding: 10pt;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sort_by,
+.upload {
+  border-radius: 10pt;
+  background-color: black;
+  padding: 7pt;
+  cursor: pointer;
+}

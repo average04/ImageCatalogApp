@@ -1,0 +1,34 @@
+.container {
+  position: absolute;
+  z-index: 1;
+  margin-top: -100pt;
+  width: auto;
+  min-width: 400px;
+  height: min(60%, 400px);
+  border: 2px solid black;
+  border-radius: 10pt;
+  background-color: rgb(245, 248, 251);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn_group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  border: 1px solid white;
+  border-radius: 10pt;
+  background-color: black;
+  padding: 7pt;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}

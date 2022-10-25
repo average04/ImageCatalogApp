@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.6",
+    "@types/react-redux": "^7.1.24",
+    "framer-motion": "^7.6.1",
+    "mdb-react-ui-kit": "^4.2.0",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-modal-image": "^2.6.0",
+    "react-moment": "^1.1.2",
+    "react-multi-carousel": "^2.8.2",
+    "react-redux": "^8.0.4"
   },
   "devDependencies": {
     "@types/node": "18.11.4",
