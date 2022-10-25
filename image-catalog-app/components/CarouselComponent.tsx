@@ -57,8 +57,29 @@ const CarouselComponent = () => {
   const handleClose = () => dispatch(hideModal());
   const handleOpen = () => {
     dispatch(setHeader(<h1>Upload an Image</h1>));
-    dispatch(setBody(<h2>Inputs here</h2>));
+    dispatch(setBody(inputs()));
     dispatch(showModal());
+  };
+
+  const inputs = () => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <input className={styles.input} type="text" placeholder="Name here" />
+        <input
+          className={styles.input}
+          type="text"
+          placeholder="Description here"
+        />
+        <input className={styles.input} type="file" placeholder="Upload here" />
+      </div>
+    );
   };
 
   const images: IImage[] = useSelector(

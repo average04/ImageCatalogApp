@@ -38,3 +38,24 @@
   padding: 7pt;
   cursor: pointer;
 }
+
+.input {
+  width: 70%;
+  margin-left: 10pt;
+  margin-top: 1pt;
+  background-color: aqua;
+  border: none;
+  border-radius: 5pt;
+  font-family: "Josefin Sans";
+  font-size: 15pt;
+}
+
+@media screen and (max-width: 580px) {
+  .input {
+    width: 90%;
+  }
+}
+
+.input:focus {
+  outline: none;
+}

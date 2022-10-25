@@ -21,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow-y: hidden;
-  z-index: 1;
+  z-index: 10000000;
 }
 
 @media (prefers-color-scheme: dark) {
