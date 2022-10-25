@@ -179,7 +179,7 @@ const CarouselComponent = () => {
           <div className={styles.carousel_wrap}>
             <Carousel ssr className={styles.carousel} responsive={responsive}>
               {images.map((image, i) => {
-                return <CarouselItem image={image} />;
+                return <CarouselItem key={i} image={image} />;
               })}
             </Carousel>
           </div>
