@@ -56,8 +56,15 @@ const CarouselComponent = () => {
 
   const handleClose = () => dispatch(hideModal());
   const handleOpen = () => {
-    dispatch(setHeader(<h1>Upload an Image</h1>));
+    dispatch(
+      setHeader(
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <h1>Upload an Image</h1>
+        </div>
+      )
+    );
     dispatch(setBody(inputs()));
+    dispatch(setFooter(footer()));
     dispatch(showModal());
   };
 
@@ -78,6 +85,21 @@ const CarouselComponent = () => {
           placeholder="Description here"
         />
         <input className={styles.input} type="file" placeholder="Upload here" />
+      </div>
+    );
+  };
+
+  const footer = () => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <button className={styles.btn}>Upload</button>
       </div>
     );
   };

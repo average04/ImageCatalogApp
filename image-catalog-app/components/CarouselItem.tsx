@@ -30,8 +30,14 @@ const CarouselItem = ({ image }: { image: IImage }) => {
     }
   };
 
+  // const handleEnlarge = (e: any) => {
+  //   if (e.detail === 2) {
+  //     setEnlarge(!enlarge);
+  //   }
+  // };
+
   const enlargeStyle: MotionStyle = {
-    zIndex: 10,
+    zIndex: 9000000,
     position: "absolute",
     top: 0,
     left: 0,

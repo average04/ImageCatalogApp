@@ -22,9 +22,9 @@
 .btn {
   border: 1px solid white;
   border-radius: 10pt;
-  background-color: black;
   padding: 7pt;
   cursor: pointer;
+  color: black;
 }
 
 @media screen and (max-width: 500px) {

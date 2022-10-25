@@ -31,18 +31,16 @@ const ImageModal = () => {
         className={styles.container}
       >
         <div className={styles.modal}>
+          <div className={styles.btn_group}>
+            <div className={styles.btn} onClick={() => handleClose()}>
+              X
+            </div>
+          </div>
           <div className={styles.header}>{header}</div>
           <br />
           <div className={styles.body}>{body}</div>
           <br />
-          <div className={styles.footer}>
-            {footer}
-            <div className={styles.btn_group}>
-              <button className={styles.btn} onClick={() => handleClose()}>
-                Close
-              </button>
-            </div>
-          </div>
+          <div className={styles.footer}>{footer}</div>
         </div>
       </motion.div>
     </BackDrop>
