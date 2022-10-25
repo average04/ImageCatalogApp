@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { RootState } from "../store";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { hideModal } from "../slice/ModalSlice";
 
 type BackDropType = {
