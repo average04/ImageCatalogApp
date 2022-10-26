@@ -20,6 +20,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { IImage } from "../slice/types";
 import CarouselItem from "./CarouselItem";
 import { ConfirmToast } from "react-confirm-toast";
+import ReactTooltip from "react-tooltip";
 
 import { AiOutlineSortAscending } from "react-icons/ai";
 import { AiOutlineSortDescending } from "react-icons/ai";
@@ -175,6 +176,14 @@ const CarouselComponent = () => {
             )}
           </motion.div>
         </div>
+        <ReactTooltip
+          id={"img-tooltip"}
+          place="top"
+          type="light"
+          effect="float"
+          multiline={false}
+          delayShow={500}
+        />
         <AnimatePresence>
           <div className={styles.carousel_wrap}>
             <Carousel ssr className={styles.carousel} responsive={responsive}>

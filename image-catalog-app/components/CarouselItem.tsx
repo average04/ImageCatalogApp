@@ -1,5 +1,5 @@
 import styles from "../styles/CarouselItem.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { setBody, showModal, setHeader, setFooter } from "../slice/ModalSlice";
 
@@ -7,10 +7,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { IImage } from "../slice/types";
 import Moment from "react-moment";
 import { motion, AnimatePresence, MotionStyle } from "framer-motion";
+import ReactTooltip from "react-tooltip";
 
 const CarouselItem = ({ image }: { image: IImage }) => {
   const dispatch = useDispatch();
   const [enlarge, setEnlarge] = useState(false);
+
+  useEffect(() => {
+    ReactTooltip.rebuild();
+  });
 
   const handleEnlarge = (e: any) => {
     if (e.detail === 2) {
@@ -64,6 +69,9 @@ const CarouselItem = ({ image }: { image: IImage }) => {
       initial={{ y: 300, opacity: 0, scale: 0.8 }}
       animate={{ y: 0, opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
+      data-for={"img-tooltip"}
+      data-tip="Double Click to View"
+      data-iscapture="true"
     >
       <motion.div
         className={styles.image_wrap}
